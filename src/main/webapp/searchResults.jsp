@@ -1,4 +1,4 @@
-<%@ page session="true" %>
+<%@ page %>
 <%
   String username = (String) session.getAttribute("user");
   if (username == null) {
@@ -20,6 +20,6 @@
     // Placeholder for messages fetched from the database
   %>
 </div>
-<a href="messageBoard.jsp">Back to Message Board</a>
+<a href="messagePanel.jsp">Back to Message Board</a>
 </body>
 </html>
