@@ -43,7 +43,7 @@ public class ProfileAddServlet extends HttpServlet {
 
         String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString();
 
-        // Validate file type (only .jpg, .jpeg, .png)
+        // validate file type (only .jpg, .jpeg, .png)
         if (!fileName.toLowerCase().matches(".*\\.(jpg|jpeg|png)$")) {
             response.getWriter().println("Invalid file type. Only .png, .jpg, and .jpeg are allowed.");
             logger.warn("Invalid file type uploaded by user: {}", session.getAttribute("username"));
@@ -61,7 +61,7 @@ public class ProfileAddServlet extends HttpServlet {
         String username = (String) session.getAttribute("username");
 
         // Generate a random unique file name for the new profile picture
-        String newFileName = UUID.randomUUID().toString() + fileName.substring(fileName.lastIndexOf('.'));
+        String newFileName = UUID.randomUUID() + fileName.substring(fileName.lastIndexOf('.'));
 
         // Prepare the file path to save the uploaded image
         String uploadPath = getServletContext().getRealPath("") + File.separator + UPLOAD_DIR;
@@ -127,7 +127,7 @@ public class ProfileAddServlet extends HttpServlet {
     }
 
     private boolean scanForMalware(Part filePart) throws IOException {
-        String apiKey = "6cc519a4174088fa74339339cd362529c2825a2a86b73bda12e00c87a29553d3";  // Replace with your API key
+        String apiKey = "6cc519a4174088fa74339339cd362529c2825a2a86b73bda12e00c87a29553d3";
         URL url = new URL("https://www.virustotal.com/api/v3/files");
 
         // Convert the uploaded file to InputStream

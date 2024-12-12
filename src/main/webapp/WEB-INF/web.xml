@@ -75,9 +75,9 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>WelcomeServlet</servlet-name>
-    <url-pattern>/welcome</url-pattern>
-    <url-pattern>/moderatorWelcome</url-pattern>
-    <url-pattern>/adminWelcome</url-pattern>
+    <url-pattern>/welcomeUser</url-pattern>
+    <url-pattern>/welcomeModerator</url-pattern>
+    <url-pattern>/welcomeAdmin</url-pattern>
 
   </servlet-mapping>
 
