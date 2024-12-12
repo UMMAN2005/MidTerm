@@ -2,11 +2,13 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <html>
 <head>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="static/css/messages.css">
     <title>Message Board</title>
 </head>
 <body>
 
-<h1>Message Board</h1>
+<h1>Message Board!</h1>
 
 <%-- Search form to filter messages by keyword --%>
 <form method="get" action="messageboard">

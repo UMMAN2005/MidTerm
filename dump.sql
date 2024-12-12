@@ -1,5 +1,6 @@
-CREATE DATABASE secureweb;
-use secureweb;
+CREATE DATABASE MidTerm;
+USE MidTerm;
+
 CREATE TABLE users (
                        id int NOT NULL AUTO_INCREMENT,
                        username varchar(50) NOT NULL,
@@ -9,6 +10,7 @@ CREATE TABLE users (
                        PRIMARY KEY (id),
                        UNIQUE KEY username (username)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 CREATE TABLE messages (id INT NOT NULL AUTO_INCREMENT,username VARCHAR(50) NOT NULL,message TEXT NOT NULL, date_posted TIMESTAMP DEFAULT CURRENT_TIMESTAMP,PRIMARY KEY (id)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 CREATE TABLE LoginAttempts (
                                username VARCHAR(255) PRIMARY KEY,
@@ -49,16 +51,6 @@ DELIMITER ;
 
 INSERT INTO users (username, password, role, profile_picture)
 VALUES ('admin', 'admin', 'admin', 'default.jpg');
-
-INSERT INTO users (username, password, role, profile_picture)
-VALUES ('vafa', 'vafa', 'user', 'vafa.jpg');
-
-INSERT INTO users (username, password, role, profile_picture)
-VALUES ('nargiz', 'nargiz', 'user', 'nargiz.jpg');
-INSERT INTO users (username, password, role) VALUES ('leyla', 'leyla', 'moderator');
-
-INSERT INTO users (username, password, role, profile_picture)
-VALUES ('sevinj', 'sevinj', 'user', 'default.jpg');
 
  ALTER TABLE Users ADD COLUMN auth_token VARCHAR(255);
  

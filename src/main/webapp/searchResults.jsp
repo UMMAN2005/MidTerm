@@ -8,6 +8,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="static/css/styles.css">
+
   <title>Search Results</title>
 </head>
 <body>

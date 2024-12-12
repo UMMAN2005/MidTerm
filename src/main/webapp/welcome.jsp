@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+  <link rel="stylesheet" href="static/css/styles.css">
+
   <title>Welcome</title>
   <style>
     /* Styling for the profile picture */

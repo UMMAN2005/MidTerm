@@ -3,6 +3,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="static/css/styles.css">
+
     <title>Welcome - Admin</title>
     <style>
         /* Styling for the profile picture */
@@ -32,6 +34,18 @@
             object-fit: cover;
         }
 
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50; /* Green button color */
+            color: white;
+            text-align: center;
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
         /* Styling for delete button */
         .delete-btn {
             background-color: red;
@@ -59,12 +73,12 @@
     <button type="submit">Upload</button>
 </form>
 
-<!-- Link to view messages -->
-<a href="messageboard">View Messages</a>
+<a href="messageBoard.jsp" class="button">View Messages</a>
+
 
 <!-- Logout Form -->
 <form action="logout" method="get">
-    <button type="submit">Logout</button>
+    <button class="delete-btn" type="submit">Logout</button>
 </form>
 
 <h2>Test Connectivity (Secure)</h2>
