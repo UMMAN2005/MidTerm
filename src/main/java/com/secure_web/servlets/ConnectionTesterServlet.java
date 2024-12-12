@@ -8,7 +8,7 @@ import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
 
-public class TestConnectivityServlet extends HttpServlet {
+public class ConnectionTesterServlet extends HttpServlet {
     // Whitelisted domains
     private static final List<String> WHITELIST = Arrays.asList(
             "yahoo.com",

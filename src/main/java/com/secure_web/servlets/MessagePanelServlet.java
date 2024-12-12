@@ -14,7 +14,7 @@ import java.io.PrintWriter;
 import java.sql.*;
 import io.github.cdimascio.dotenv.Dotenv;
 @WebServlet("/messageboard")
-public class MessageBoardServlet extends HttpServlet {
+public class MessagePanelServlet extends HttpServlet {
 
     // Handles the GET request to display the message board and search functionality
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

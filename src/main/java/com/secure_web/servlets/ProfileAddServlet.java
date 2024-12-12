@@ -9,13 +9,11 @@ import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.file.*;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.UUID;
 import java.sql.*;
 
-public class UploadProfilePictureServlet extends HttpServlet {
-    private static final Logger logger = LogManager.getLogger(UploadProfilePictureServlet.class);
+public class ProfileAddServlet extends HttpServlet {
+    private static final Logger logger = LogManager.getLogger(ProfileAddServlet.class);
     private static final String UPLOAD_DIR = "profile_pics";
     private static final long MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 

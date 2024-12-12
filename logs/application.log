@@ -1,24 +1,6 @@
 2024-12-07 01:13:01 - User admin logged in successfully
-2024-12-07 01:13:17 - Failed login attempt for username: xalide
-2024-12-07 01:25:06 - Failed login attempt for username: solmaz
-2024-12-07 11:01:31 - User admin logged in successfully
-2024-12-07 12:13:59 - User admin logged in successfully
-2024-12-11 15:36:19 - User admin logged in successfully
-2024-12-11 15:41:47 - User admin logged in successfully
-2024-12-11 16:15:11 - User admin logged in successfully
-2024-12-11 16:21:36 - User admin logged in successfully
-2024-12-11 16:29:24 - User admin logged in successfully
-2024-12-11 16:29:24 - User admin logged in successfully
-2024-12-11 16:33:41 - User admin logged in successfully
-2024-12-11 16:34:54 - User admin logged in successfully
-2024-12-11 16:35:59 - User admin logged in successfully
-2024-12-11 16:48:21 - User admin logged in successfully
-2024-12-11 16:54:43 - User admin logged in successfully
-2024-12-11 16:56:59 - User admin logged in successfully
 2024-12-11 17:05:47 - User admin logged in successfully
 2024-12-11 17:09:09 - User admin logged in successfully
-2024-12-11 17:15:34 - User admin logged in successfully
-2024-12-11 17:18:19 - User admin logged in successfully
 2024-12-11 17:26:34 - User admin logged in successfully
 2024-12-11 17:44:00 - Database error: Unknown column 'password_hash' in 'field list'
 2024-12-11 17:44:11 - Database error: Unknown column 'password_hash' in 'field list'
@@ -26,8 +8,6 @@
 2024-12-11 17:51:27 - User admin uploaded a new profile picture: 4dbcaa52-57d3-4b50-8711-fabff21db84e.jpg
 2024-12-11 18:00:13 - Failed login attempt for username: admin
 2024-12-11 18:00:39 - Failed login attempt for username: admin
-2024-12-11 18:00:47 - Failed login attempt for username: admin
-2024-12-11 18:00:54 - Failed login attempt for username: admin
 2024-12-11 18:00:59 - Failed login attempt for username: admin
 2024-12-11 18:01:04 - User admin is locked out due to too many failed login attempts.
 2024-12-11 18:02:20 - User admin is locked out due to too many failed login attempts.
@@ -37,8 +17,99 @@
 2024-12-12 11:42:58 - User admin logged in successfully.
 2024-12-12 11:54:11 - User admin logged in successfully.
 2024-12-12 14:05:36 - User admin logged in successfully.
-2024-12-12 14:16:04 - User admin logged in successfully.
-2024-12-12 14:17:52 - User admin logged in successfully.
-2024-12-12 14:20:10 - User admin logged in successfully.
-2024-12-12 14:22:46 - User admin logged in successfully.
-2024-12-12 14:27:32 - User admin logged in successfully.
+2024-12-12 14:16:04 - User admin logged in successfully.2024-12-12 15:01:29 - Error during login process.
+java.sql.SQLSyntaxErrorException: Table 'casestudy.loginattempts' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.secure_web.servlets.LoginServlet.isUserLockedOut(LoginServlet.java:92) ~[classes/:?]
+	at com.secure_web.servlets.LoginServlet.doPost(LoginServlet.java:33) [classes/:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555) [servlet-api.jar:4.0.FR]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) [servlet-api.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199) [catalina.jar:9.0.96]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) [catalina.jar:9.0.96]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) [tomcat-websocket.jar:9.0.96]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168) [catalina.jar:9.0.96]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) [catalina.jar:9.0.96]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168) [catalina.jar:9.0.96]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [catalina.jar:9.0.96]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) [catalina.jar:9.0.96]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) [catalina.jar:9.0.96]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [catalina.jar:9.0.96]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:660) [catalina.jar:9.0.96]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [catalina.jar:9.0.96]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) [catalina.jar:9.0.96]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:383) [tomcat-coyote.jar:9.0.96]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-coyote.jar:9.0.96]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:937) [tomcat-coyote.jar:9.0.96]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) [tomcat-coyote.jar:9.0.96]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-coyote.jar:9.0.96]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) [tomcat-util.jar:9.0.96]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.96]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) [tomcat-util.jar:9.0.96]
+	at java.lang.Thread.run(Thread.java:842) [?:?]
+2024-12-12 15:02:11 - Error during login process.
+java.sql.SQLSyntaxErrorException: Table 'casestudy.loginattempts' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.secure_web.servlets.LoginServlet.isUserLockedOut(LoginServlet.java:92) ~[classes/:?]
+	at com.secure_web.servlets.LoginServlet.doPost(LoginServlet.java:33) [classes/:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555) [servlet-api.jar:4.0.FR]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) [servlet-api.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199) [catalina.jar:9.0.96]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) [catalina.jar:9.0.96]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) [tomcat-websocket.jar:9.0.96]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168) [catalina.jar:9.0.96]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) [catalina.jar:9.0.96]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168) [catalina.jar:9.0.96]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [catalina.jar:9.0.96]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) [catalina.jar:9.0.96]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) [catalina.jar:9.0.96]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [catalina.jar:9.0.96]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:660) [catalina.jar:9.0.96]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [catalina.jar:9.0.96]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) [catalina.jar:9.0.96]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:383) [tomcat-coyote.jar:9.0.96]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-coyote.jar:9.0.96]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:937) [tomcat-coyote.jar:9.0.96]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) [tomcat-coyote.jar:9.0.96]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-coyote.jar:9.0.96]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) [tomcat-util.jar:9.0.96]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.96]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) [tomcat-util.jar:9.0.96]
+	at java.lang.Thread.run(Thread.java:842) [?:?]
+2024-12-12 15:02:28 - Error during login process.
+java.sql.SQLSyntaxErrorException: Table 'casestudy.loginattempts' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.secure_web.servlets.LoginServlet.isUserLockedOut(LoginServlet.java:92) ~[classes/:?]
+	at com.secure_web.servlets.LoginServlet.doPost(LoginServlet.java:33) [classes/:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555) [servlet-api.jar:4.0.FR]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) [servlet-api.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199) [catalina.jar:9.0.96]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) [catalina.jar:9.0.96]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) [tomcat-websocket.jar:9.0.96]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168) [catalina.jar:9.0.96]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) [catalina.jar:9.0.96]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168) [catalina.jar:9.0.96]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [catalina.jar:9.0.96]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) [catalina.jar:9.0.96]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) [catalina.jar:9.0.96]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [catalina.jar:9.0.96]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:660) [catalina.jar:9.0.96]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [catalina.jar:9.0.96]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) [catalina.jar:9.0.96]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:383) [tomcat-coyote.jar:9.0.96]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-coyote.jar:9.0.96]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:937) [tomcat-coyote.jar:9.0.96]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) [tomcat-coyote.jar:9.0.96]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-coyote.jar:9.0.96]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) [tomcat-util.jar:9.0.96]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.96]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) [tomcat-util.jar:9.0.96]
+	at java.lang.Thread.run(Thread.java:842) [?:?]

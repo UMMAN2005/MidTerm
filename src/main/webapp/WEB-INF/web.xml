@@ -3,15 +3,15 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          version="3.0">
   <filter>
-    <filter-name>AuthenticationFilter</filter-name>
-    <filter-class>com.secure_web.filters.AuthenticationFilter</filter-class>
+    <filter-name>AuthFilter</filter-name>
+    <filter-class>com.secure_web.filters.AuthFilter</filter-class>
   </filter>
 
   <filter-mapping>
-    <filter-name>AuthenticationFilter</filter-name>
+    <filter-name>AuthFilter</filter-name>
     <url-pattern>/messageBoard.jsp</url-pattern>
     <url-pattern>/welcome.jsp</url-pattern>
-    <url-pattern>/uploadProfilePictureServlet</url-pattern>
+    <url-pattern>/profileAddServlet</url-pattern>
     <!-- Add any other URLs you want to protect -->
   </filter-mapping>
 
@@ -27,18 +27,18 @@
 
   <!-- Servlet for Message Board -->
   <servlet>
-    <servlet-name>MessageBoardServlet</servlet-name>
-    <servlet-class>com.secure_web.servlets.MessageBoardServlet</servlet-class>
+    <servlet-name>MessagePanelServlet</servlet-name>
+    <servlet-class>com.secure_web.servlets.MessagePanelServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>MessageBoardServlet</servlet-name>
+    <servlet-name>MessagePanelServlet</servlet-name>
     <url-pattern>/messageBoard</url-pattern>
   </servlet-mapping>
 
   <!-- Servlet for Profile Picture Upload -->
   <servlet>
-    <servlet-name>UploadProfilePictureServlet</servlet-name>
-    <servlet-class>com.secure_web.servlets.UploadProfilePictureServlet</servlet-class>
+    <servlet-name>ProfileAddServlet</servlet-name>
+    <servlet-class>com.secure_web.servlets.ProfileAddServlet</servlet-class>
     <multipart-config>
       <max-file-size>2097152</max-file-size> <!-- Max file size (2MB in this example) -->
       <max-request-size>4194304</max-request-size> <!-- Max request size (4MB in this example) -->
@@ -46,8 +46,8 @@
     </multipart-config>
   </servlet>
   <servlet-mapping>
-    <servlet-name>UploadProfilePictureServlet</servlet-name>
-    <url-pattern>/uploadProfilePicture</url-pattern>
+    <servlet-name>ProfileAddServlet</servlet-name>
+    <url-pattern>/profileAdd</url-pattern>
   </servlet-mapping>
 
   <!-- Servlet for Logout -->
@@ -60,13 +60,13 @@
     <url-pattern>/logout</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>TestConnectivityServlet</servlet-name>
-    <servlet-class>com.secure_web.servlets.TestConnectivityServlet</servlet-class>
+    <servlet-name>ConnectionTesterServlet</servlet-name>
+    <servlet-class>com.secure_web.servlets.ConnectionTesterServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>TestConnectivityServlet</servlet-name>
-    <url-pattern>/testConnectivity</url-pattern>
+    <servlet-name>ConnectionTesterServlet</servlet-name>
+    <url-pattern>/connectionTester</url-pattern>
   </servlet-mapping>
   <!-- Welcome Page -->
   <servlet>
@@ -82,14 +82,14 @@
   </servlet-mapping>
 
   <servlet>
-    <servlet-name>DeleteProfilePictureServlet</servlet-name>
-    <servlet-class>com.secure_web.servlets.DeleteProfilePictureServlet</servlet-class>
+    <servlet-name>ProfileRemoveServlet</servlet-name>
+    <servlet-class>com.secure_web.servlets.ProfileRemoveServlet</servlet-class>
   </servlet>
 
   <!-- Servlet mapping -->
   <servlet-mapping>
-    <servlet-name>DeleteProfilePictureServlet</servlet-name>
-    <url-pattern>/deleteProfilePicture</url-pattern>
+    <servlet-name>ProfileRemoveServlet</servlet-name>
+    <url-pattern>/profileRemoveServlet</url-pattern>
   </servlet-mapping>
 
 

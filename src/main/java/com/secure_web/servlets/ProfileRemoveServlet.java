@@ -6,7 +6,7 @@ import java.io.*;
 import java.sql.*;
 import io.github.cdimascio.dotenv.Dotenv;
 
-public class DeleteProfilePictureServlet extends HttpServlet {
+public class ProfileRemoveServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Ensure the user is logged in
         HttpSession session = request.getSession(false);

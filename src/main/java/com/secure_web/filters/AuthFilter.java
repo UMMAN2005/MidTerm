@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.IOException;
 
-public class AuthenticationFilter implements Filter {
+public class AuthFilter implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
