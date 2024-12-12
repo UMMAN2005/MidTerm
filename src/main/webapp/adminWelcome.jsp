@@ -68,7 +68,7 @@
 <img src="<%= request.getAttribute("profilePicture") != null ? request.getAttribute("profilePicture") : "profile_pics/default.jpg" %>" alt="Profile Picture" class="profile-img"><br>
 
 <!-- Form for uploading a new profile picture -->
-<form action="uploadProfilePicture" method="post" enctype="multipart/form-data">
+<form action="profileAdd" method="post" enctype="multipart/form-data">
     <input type="file" name="profile_picture" accept="image/*" required><br><br>
     <button type="submit">Upload</button>
 </form>
@@ -82,7 +82,7 @@
 </form>
 
 <h2>Test Connectivity (Secure)</h2>
-<form action="testConnectivity" method="post">
+<form action="connectionTester" method="post">
     <label for="url">Enter a URL (whitelisted domains only):</label>
     <input type="text" id="url" name="url" placeholder="http://example.com" required>
     <button type="submit">Test</button>
@@ -99,7 +99,7 @@
     <div class="profile-item">
         <img src="<%= userProfile.get("profilePicture") != null ? userProfile.get("profilePicture") : "profile_pics/default.jpg" %>" alt="<%= userProfile.get("username") %>'s Profile Picture">
         <p><%= userProfile.get("username") %></p>
-        <form action="deleteProfilePicture" method="post" onsubmit="return confirm('Are you sure you want to delete this profile picture?');">
+        <form action="profileRemoveServlet" method="post" onsubmit="return confirm('Are you sure you want to delete this profile picture?');">
             <input type="hidden" name="username" value="<%= userProfile.get("username") %>">
             <button type="submit" class="delete-btn">Delete Profile Picture</button>
         </form>

@@ -22,7 +22,7 @@
 <img src="<%= request.getAttribute("profilePicture") != null ? request.getAttribute("profilePicture") : "profile_pics/default.jpg" %>" alt="Profile Picture" class="profile-img"><br>
 
 <!-- Form for uploading a new profile picture -->
-<form action="uploadProfilePicture" method="post" enctype="multipart/form-data">
+<form action="profileAdd" method="post" enctype="multipart/form-data">
   <input type="file" name="profile_picture" accept="image/*" required><br><br>
   <button type="submit">Upload</button>
 </form>
@@ -36,7 +36,7 @@
   <button type="submit">Logout</button>
 </form>
 <h2>Test Connectivity (Secure)</h2>
-<form action="testConnectivity" method="post">
+<form action="connectionTester" method="post">
   <label for="url">Enter a URL (whitelisted domains only):</label>
   <input type="text" id="url" name="url" placeholder="http://example.com" required>
   <button type="submit">Test</button>
