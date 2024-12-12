@@ -73,7 +73,7 @@
     <button type="submit">Upload</button>
 </form>
 
-<a href="messageBoard.jsp" class="button">View Messages</a>
+<a href="messagePanel.jsp" class="button">View Messages</a>
 
 
 <!-- Logout Form -->

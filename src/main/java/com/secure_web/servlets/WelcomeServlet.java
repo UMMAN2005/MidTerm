@@ -100,14 +100,14 @@ public class WelcomeServlet extends HttpServlet {
             request.setAttribute("userProfiles", userProfiles);
             // Forward to the appropriate JSP based on the role
             if ("admin".equalsIgnoreCase(userRole)) {
-                RequestDispatcher dispatcher = request.getRequestDispatcher("adminWelcome.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("welcomeAdmin.jsp");
                 dispatcher.forward(request, response);
             } else {
-                RequestDispatcher dispatcher = request.getRequestDispatcher("moderatorWelcome.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("welcomeModerator.jsp");
                 dispatcher.forward(request, response);
             }
         } else {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("welcome.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("welcomeUser.jsp");
             dispatcher.forward(request, response);
         }
     }
