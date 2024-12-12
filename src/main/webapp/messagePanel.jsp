@@ -1,5 +1,5 @@
 <%@ page import="java.sql.*" %>
-<%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <html>
 <head>
     <link rel="stylesheet" href="static/css/styles.css">
@@ -70,7 +70,6 @@
 <form action="logout" method="get" style="display:inline;">
     <button type="submit">Logout</button>
 </form>
-</p>
 <%
     }
 %>
